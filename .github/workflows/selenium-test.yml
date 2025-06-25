@@ -19,18 +19,7 @@ jobs:
         python-version: '3.11'
 
     - name: Install dependencies
-      run: |
-        pip install -r "d:/2nd project/Test python file/requirements.txt"
-        wget https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
-        unzip chromedriver_linux64.zip
-        sudo mv chromedriver /usr/local/bin/
-        sudo chmod +x /usr/local/bin/chromedriver
+      run: pip install -r "Test python file/requirements.txt"
 
     - name: Run Selenium test
-      env:
-        DISPLAY: :99
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y xvfb
-        Xvfb :99 -screen 0 1920x1080x24 &
-        python "d:/2nd project/Test python file/test_login_selenium.py"
+      run: python "Test python file/test_login_selenium.py"
