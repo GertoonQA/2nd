@@ -65,6 +65,6 @@ doc.save(word_path)
 
 print(f"Бүх screenshot болон тайлан: {base_folder} хавтсанд хадгалагдлаа.")
 print(f"Word файл: {word_path} хадгалагдлаа.")
-print("Тест дууслаа!")
+print("Тест дууслаа!") #aaa bla2 teeeest
 
 driver = webdriver.Chrome(options=options)
