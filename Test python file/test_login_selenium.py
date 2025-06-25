@@ -27,7 +27,7 @@ doc = Document()
 doc.add_heading('Selenium Login Test Report', 0)
 
 print("Browser нээгдэж байна...")
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(options=options)
 driver.get("https://the-internet.herokuapp.com/login")
 time.sleep(1)
 img1 = os.path.join(img_folder, "01_open_browser.png")
@@ -65,6 +65,5 @@ doc.save(word_path)
 
 print(f"Бүх screenshot болон тайлан: {base_folder} хавтсанд хадгалагдлаа.")
 print(f"Word файл: {word_path} хадгалагдлаа.")
-print("Тест дууслаа!") #aaa bla2 teeeest, ovoo shde bolchloo shde
-
-driver = webdriver.Chrome(options=options)
+print("Тест дууслаа!")
+# driver = webdriver.Chrome(options=options)  # ← энэ мөрийг устгана
