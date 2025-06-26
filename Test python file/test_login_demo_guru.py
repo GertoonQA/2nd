@@ -15,11 +15,15 @@ options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--disable-gpu")
 
 # 1. Он сартай, давхцахгүй фолдер үүсгэх
+results_root = r"D:\2nd project\results"  # Үндсэн хадгалах хавтас
+os.makedirs(results_root, exist_ok=True)
 now = datetime.now().strftime("%Y%m%d_%H%M%S")
-base_folder = f"test_result_{now}"
+base_folder = os.path.join(results_root, f"test_result_{now}")
 os.makedirs(base_folder, exist_ok=True)
 img_folder = os.path.join(base_folder, "screenshots")
 os.makedirs(img_folder, exist_ok=True)
+
+# ...дараагийн бүх код хэвээр...
 
 # 2. Word файл үүсгэх
 doc = Document()
